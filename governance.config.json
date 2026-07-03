@@ -1,0 +1,25 @@
+{
+  "project_id": "Enter your GCP project_id",
+  "region": "region",
+  "governance": {
+    "required_labels": ["owner", "env"], #can be added more 
+    "get_max_attempts": 5,
+    "get_initial_delay_seconds": 1.0
+  },
+  "service_accounts": {
+    "runtime": "GCP service_account with IAM permissions",
+    "push_auth": null
+  },
+  "cloud_run": {
+    "service_name": "governance-engine" #set as per requirement 
+  },
+  "pubsub": {
+    "events_topic": "vm-governance-events",  
+    "alerts_topic": "governance-alerts",
+    "push_subscription": "vm-governance-push",
+    "push_ack_deadline_seconds": 60
+  },
+  "logging": {
+    "sink_name": "vm-governance-sink"
+  }
+}

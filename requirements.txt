@@ -1,0 +1,10 @@
+flask==3.*
+gunicorn==22.*
+google-api-core==2.*
+google-api-python-client==2.*
+google-auth==2.*
+google-cloud-artifact-registry==1.*
+google-cloud-bigquery==3.*
+google-cloud-compute==1.*
+google-cloud-container==2.*
+google-cloud-pubsub==2.*
